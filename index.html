@@ -1,45 +1,104 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>GÖKSU FORKLİFT | Transpalet, Forklift Tamir & Bakım – Sultanbeyli</title>
-  <meta name="description" content="GÖKSU FORKLİFT: Transpalet ve forklift tamir-bakım, yerinde servis, periyodik bakım ve yedek parça. Sultanbeyli ve çevresi. Hızlı dönüş, garantili işçilik.">
-  <style>
-    body {margin:0; font-family: Arial, sans-serif; background:#111; color:#f2f2f2;}
-    header.container {display:flex; justify-content:space-between; align-items:center; padding:10px 20px; background:#000;}
-    .brand {display:flex; align-items:center;}
-    .brand .logo {margin-right:10px;}
-    .brand-name {font-size:1.3rem; font-weight:bold;}
-    .brand-tag {display:block; font-size:0.8rem; color:#aaa;}
-    nav a {color:#f2f2f2; margin-left:15px; text-decoration:none;}
-    nav a.btn {background:#ffd700; color:#000; padding:5px 10px; border-radius:5px;}
-    .container {max-width:900px; margin:auto; padding:20px;}
-    .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:15px;}
-    .card {background:#1a1a1a; padding:15px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,.4);}
-    h3 {color:#ffd700;}
-    .wa-fab {position:fixed; bottom:20px; right:20px; background:#25d366; color:white; padding:12px 16px; border-radius:50%; font-weight:bold; font-size:1.2rem; text-decoration:none;}
-    footer {text-align:center; padding:15px; color:#777; font-size:0.9rem;}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GÖKSU FORKLİFT | Transpalet • Forklift • Manlift Tamir & Bakım</title>
+<meta name="description" content="Göksu Forklift — Transpalet, forklift ve manlift tamir-bakım, yerinde servis, periyodik bakım ve yedek parça. Sultanbeyli ve çevresi.">
+<link rel="icon" href="favicon.png">
+<style>
+  :root{
+    --bg1:#0b0f14; --bg2:#12161f; --brand:#ffd000; --text:#f2f2f2; --muted:#b9bcc5;
+    --card:#141a22; --stroke:#222a36; --accent:#25d366;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:linear-gradient(160deg,var(--bg1),var(--bg2));}
+  a{color:var(--text);text-decoration:none}
+  .container{max-width:1100px;margin:0 auto;padding:20px}
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:rgba(10,12,18,.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--stroke)}
+  .topbar{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:12px}
+  .brand .logo{width:50px;height:50px;border-radius:10px;background:#fff;object-fit:contain}
+  .brand-name{font-weight:800;letter-spacing:.3px}
+  .brand-tag{display:block;color:var(--muted);font-weight:600}
+  nav a{margin-left:16px;color:var(--muted)}
+  nav a:hover{color:var(--text)}
+  .btn{display:inline-block;padding:9px 14px;border-radius:14px;border:1px solid var(--stroke);font-weight:700}
+  .btn.primary{background:var(--brand);color:#111;border-color:#111}
+  .btn.ghost:hover{border-color:var(--brand)}
+  /* Hero */
+  .hero{position:relative;padding:56px 20px 28px}
+  .hero h1{font-size:40px;line-height:1.1;margin:0 0 10px}
+  .hero p{color:var(--muted);max-width:760px;margin:0 0 16px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap}
+  /* Card grid */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .card{background:var(--card);border:1px solid var(--stroke);border-radius:18px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:transform .12s ease, box-shadow .12s ease}
+  .card:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(0,0,0,.35)}
+  h3{color:var(--brand);margin:6px 0 8px}
+  /* Contact */
+  .contact a{color:var(--brand)}
+  .people{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}
+  /* Footer & FAB */
+  footer{border-top:1px solid var(--stroke);color:var(--muted);text-align:center;padding:20px}
+  .wa-fab{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;font-weight:800;border:2px solid #0e131a;box-shadow:0 10px 24px rgba(0,0,0,.35)}
+  /* Banner (kartvizit) */
+  .banner{background:#fff;padding:10px}
+  .banner img{max-width:100%;height:auto;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  /* Background illustrations (inline SVG data URIs) */
+  .bg{
+    pointer-events:none;position:absolute;inset:0;z-index:-1;opacity:.12;
+    background:
+      url("data:image/svg+xml,%3Csvg width='260' height='260' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 170h120v36a10 10 0 0 1-10 10H40a10 10 0 0 1-10-10zM168 70h14v110h-14zM186 70h10v110h-10z' fill='%23ffd000'/%3E%3Ccircle cx='60' cy='216' r='16' fill='%23ffffff'/%3E%3Ccircle cx='130' cy='216' r='16' fill='%23ffffff'/%3E%3C/svg%3E") left -40px top -20px no-repeat,
+      url("data:image/svg+xml,%3Csvg width='280' height='280' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='30' y='160' width='140' height='24' rx='6' fill='%23ffd000'/%3E%3Crect x='40' y='80' width='70' height='70' rx='12' fill='%23ffd000'/%3E%3Ccircle cx='70' cy='210' r='14' fill='%23ffffff'/%3E%3Ccircle cx='140' cy='210' r='14' fill='%23ffffff'/%3E%3C/svg%3E") right -60px top 20px no-repeat,
+      url("data:image/svg+xml,%3Csvg width='280' height='280' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='120' y='40' width='20' height='180' rx='8' fill='%23ffd000'/%3E%3Crect x='60' y='200' width='160' height='18' rx='8' fill='%23ffd000'/%3E%3Ccircle cx='90' cy='230' r='14' fill='%23ffffff'/%3E%3Ccircle cx='190' cy='230' r='14' fill='%23ffffff'/%3E%3C/svg%3E") left 30% bottom -60px no-repeat;
+    background-size:320px 320px, 320px 320px, 320px 320px;
+  }
+  /* Responsive */
+  @media (max-width:980px){.grid{grid-template-columns:1fr}.people{grid-template-columns:1fr}.hero h1{font-size:32px}}
+</style>
 </head>
 <body>
 
-<header class="container">
-  <div class="brand">
-    <img src="logo.png" alt="Göksu Forklift Logo" class="logo" style="width:50px; height:50px;">
-    <div class="brand-text">
-      <span class="brand-name">GÖKSU FORKLİFT</span>
-      <small class="brand-tag">TRANSPALET • Tamir &amp; Bakım</small>
+<header>
+  <div class="container topbar">
+    <div class="brand">
+      <img src="logo.png" alt="Göksu Forklift Logo" class="logo">
+      <div>
+        <span class="brand-name">GÖKSU FORKLİFT</span>
+        <small class="brand-tag">TRANSPALET • FORKLİFT • MANLİFT — Tamir &amp; Bakım</small>
+      </div>
     </div>
+    <nav>
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#iletisim">İletişim</a>
+      <a class="btn" href="https://wa.me/905335930258" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
   </div>
-  <nav>
-    <a href="#hizmetler">Hizmetler</a>
-    <a href="#iletisim">İletişim</a>
-    <a class="btn small" href="https://wa.me/905335930258" target="_blank" rel="noopener">WhatsApp</a>
-  </nav>
 </header>
 
+<!-- Kartvizit banner (kartvizit.jpg dosyasını repo köküne yükleyin) -->
+<div class="banner">
+  <div class="container">
+    <img src="kartvizit.jpg" alt="Göksu Forklift Kartvizit">
+  </div>
+</div>
+
+<section class="hero">
+  <div class="bg"></div>
+  <div class="container">
+    <h1>Transpalet • Forklift • Manlift <br> Tamir • Bakım • Servis</h1>
+    <p>Yerinde arıza tespiti, periyodik bakım, motor/şanzıman yenileme, kart ve elektrik tesisatı onarımı. Hızlı dönüş, şeffaf fiyat, garantili işçilik.</p>
+    <div class="cta">
+      <a class="btn primary" href="tel:+905335930258">Telefon Et (Musa)</a>
+      <a class="btn ghost" href="https://wa.me/905335930258" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
 <section id="hizmetler" class="container grid">
+  <!-- Arıza Tespiti -->
   <article class="card">
     <h3>Arıza Tespiti</h3>
     <p>
@@ -48,6 +107,7 @@
     </p>
   </article>
 
+  <!-- Periyodik Bakım -->
   <article class="card">
     <h3>Periyodik Bakım</h3>
     <p>
@@ -57,6 +117,7 @@
     </p>
   </article>
 
+  <!-- Yedek Parça -->
   <article class="card">
     <h3>Yedek Parça</h3>
     <p>
@@ -66,26 +127,35 @@
   </article>
 </section>
 
-<section id="iletisim" class="container">
+<section id="iletisim" class="container contact">
   <h2>İletişim</h2>
-  <p><b>Musa Usta</b> – <a href="tel:+905335930258">+90 533 593 02 58</a> · <a href="https://wa.me/905335930258" target="_blank" rel="noopener">WhatsApp</a></p>
-  <p><b>Enis Göğsu</b> – <a href="tel:+905321395336">+90 532 139 53 36</a></p>
-  <p>
-    Ofis: Abdurrahmangazi Mah. Petrolyolu Cad. No:142/A, Sultanbeyli – İstanbul
-    · <a href="https://maps.google.com/?q=Abdurrahmangazi%20Mah.%20Petrolyolu%20Cad.%20No:142/A%20Sultanbeyli%20İstanbul" target="_blank" rel="noopener">Haritada Aç</a>
-  </p>
-  <p>
-    Atölye: Hamidiye Mah. Seyyid Kutup Cad. No:1/A, Sultanbeyli – İstanbul
-    · <a href="https://maps.google.com/?q=Hamidiye%20Mah.%20Seyyid%20Kutup%20Cad.%20No:1/A%20Sultanbeyli%20İstanbul" target="_blank" rel="noopener">Haritada Aç</a>
-  </p>
+  <div class="people">
+    <div>
+      <b>Musa Usta</b><br>
+      <a href="tel:+905335930258">+90 533 593 02 58</a> ·
+      <a href="https://wa.me/905335930258" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <div>
+      <b>Enis Göğsu</b><br>
+      <a href="tel:+905321395336">+90 532 139 53 36</a>
+    </div>
+  </div>
+  <p><b>Ofis:</b> Abdurrahmangazi Mah. Petrolyolu Cad. No:142/A, Sultanbeyli – İstanbul ·
+     <a href="https://maps.google.com/?q=Abdurrahmangazi%20Mah.%20Petrolyolu%20Cad.%20No:142/A%20Sultanbeyli%20İstanbul" target="_blank" rel="noopener">Haritada Aç</a></p>
+  <p><b>Atölye:</b> Hamidiye Mah. Seyyid Kutup Cad. No:1/A, Sultanbeyli – İstanbul ·
+     <a href="https://maps.google.com/?q=Hamidiye%20Mah.%20Seyyid%20Kutup%20Cad.%20No:1/A%20Sultanbeyli%20İstanbul" target="_blank" rel="noopener">Haritada Aç</a></p>
   <p><b>Email:</b> <a href="mailto:goksu.forklift@gmail.com">goksu.forklift@gmail.com</a></p>
 </section>
 
-<a class="wa-fab" href="https://wa.me/905335930258" target="_blank" title="WhatsApp">💬</a>
+<a class="wa-fab" href="https://wa.me/905335930258" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
 
 <footer>
-  © 2025 Göksu Forklift • Tüm Hakları Saklıdır
+  © <span id="yil"></span> Göksu Forklift • Tüm Hakları Saklıdır
 </footer>
+
+<script>
+  document.getElementById('yil').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
