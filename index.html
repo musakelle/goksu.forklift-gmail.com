@@ -1,89 +1,45 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>GÖKSU FORKLİFT | TRANSPALET • Tamir & Bakım</title>
-  <meta name="description" content="GÖKSU FORKLİFT — Forklift & transpalet tamir-bakım, periyodik servis, yedek parça ve yerinde arıza çözümü. Sultanbeyli ve çevresi.">
-  <meta name="robots" content="index,follow">
+  <title>GÖKSU FORKLİFT | Transpalet, Forklift Tamir & Bakım – Sultanbeyli</title>
+  <meta name="description" content="GÖKSU FORKLİFT: Transpalet ve forklift tamir-bakım, yerinde servis, periyodik bakım ve yedek parça. Sultanbeyli ve çevresi. Hızlı dönüş, garantili işçilik.">
   <style>
-    *{box-sizing:border-box}
-    :root{--bg:#0b0b0f;--card:#13131a;--text:#f2f2f2;--muted:#b9bcc5;--brand:#ffd000;--stroke:#2a2a36}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
-    a{color:var(--text);text-decoration:none}
-    .container{max-width:1080px;margin:0 auto;padding:20px}
-    header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--stroke);position:sticky;top:0;background:rgba(11,11,15,.86);backdrop-filter:saturate(140%) blur(8px);z-index:10}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:44px;height:44px;border-radius:10px;border:1px solid var(--stroke);background:#0b0b0f;display:grid;place-items:center}
-    nav a{margin-left:16px;color:var(--muted)}
-    nav a:hover{color:var(--text)}
-    .btn{display:inline-block;padding:10px 16px;border-radius:14px;border:1px solid var(--stroke);font-weight:600}
-    .btn.primary{background:var(--brand);color:#222}
-    .btn.ghost:hover{border-color:var(--brand)}
-    .small{padding:8px 12px;font-size:14px}
-    .brand-name{font-weight:800;letter-spacing:.2px;display:block}
-    .brand-tag{color:var(--muted);font-weight:600}
-    .hero{padding:56px 20px 30px 20px}
-    .hero h1{font-size:38px;line-height:1.15;margin:0 0 10px}
-    .hero p{color:var(--muted);max-width:720px;margin:0 0 16px}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
-    .badges{display:flex;gap:10px;list-style:none;padding:0;margin:14px 0 0;color:#111}
-    .badges li{background:var(--brand);padding:6px 10px;border-radius:12px;font-weight:700}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:var(--card);border:1px solid var(--stroke);border-radius:18px;padding:18px}
-    .card h3{margin:6px 0 8px}
-    .contact .people{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:8px}
-    .contact a{color:var(--brand)}
-    .footer{border-top:1px solid var(--stroke);color:var(--muted);text-align:center}
-    .wa-fab{position:fixed;right:18px;bottom:18px;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#111;font-weight:800;border:2px solid #111;box-shadow:0 8px 20px rgba(0,0,0,.35)}
-    @media (max-width:900px){.grid{grid-template-columns:1fr}.contact .people{grid-template-columns:1fr}.hero h1{font-size:32px}}
-    /* simple inline SVG forklift badge */
-    .forklift svg{display:block}
+    body {margin:0; font-family: Arial, sans-serif; background:#111; color:#f2f2f2;}
+    header.container {display:flex; justify-content:space-between; align-items:center; padding:10px 20px; background:#000;}
+    .brand {display:flex; align-items:center;}
+    .brand .logo {margin-right:10px;}
+    .brand-name {font-size:1.3rem; font-weight:bold;}
+    .brand-tag {display:block; font-size:0.8rem; color:#aaa;}
+    nav a {color:#f2f2f2; margin-left:15px; text-decoration:none;}
+    nav a.btn {background:#ffd700; color:#000; padding:5px 10px; border-radius:5px;}
+    .container {max-width:900px; margin:auto; padding:20px;}
+    .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:15px;}
+    .card {background:#1a1a1a; padding:15px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,.4);}
+    h3 {color:#ffd700;}
+    .wa-fab {position:fixed; bottom:20px; right:20px; background:#25d366; color:white; padding:12px 16px; border-radius:50%; font-weight:bold; font-size:1.2rem; text-decoration:none;}
+    footer {text-align:center; padding:15px; color:#777; font-size:0.9rem;}
   </style>
 </head>
 <body>
-  <header class="container">
-    <div class="brand">
-      <div class="logo forklift" aria-hidden="true">
-        <!-- inline SVG logo -->
-        <svg width="28" height="28" viewBox="0 0 64 64" fill="none">
-          <rect x="2" y="2" width="60" height="60" rx="10" fill="#0b0b0f" stroke="#2a2a36"/>
-          <g transform="translate(10,12)">
-            <rect x="0" y="24" width="28" height="12" rx="3" fill="#ffd000"/>
-            <circle cx="6" cy="43" r="5" fill="#fff"/><circle cx="24" cy="43" r="5" fill="#fff"/>
-            <rect x="30" y="6" width="3" height="28" rx="1.5" fill="#ffd000"/>
-            <rect x="34" y="6" width="3" height="28" rx="1.5" fill="#ffd000"/>
-          </g>
-        </svg>
-      </div>
-      <div>
-        <span class="brand-name">GÖKSU FORKLİFT</span>
-        <small class="brand-tag">TRANSPALET • Tamir &amp; Bakım</small>
-      </div>
-    </div>
-    <nav>
-      <a href="#hizmetler">Hizmetler</a>
-      <a href="#iletisim">İletişim</a>
-      <a class="btn small" href="https://wa.me/905321395336" target="_blank" rel="noopener">WhatsApp</a>
-    </nav>
-  </header>
-<div style="text-align:center; background:#fff; padding:10px;">
-  <img src="https://raw.githubusercontent.com/musakelle/goksu.forklift-gmail.com/main/kartvizit.jpg" alt="Göksu Forklift Kartvizit" style="max-width:100%; height:auto; border-radius:10px; box-shadow:0 4px 14px rgba(0,0,0,.2);">
-</div>
-  <section class="hero container">
-    <h1>Forklift &amp; Transpalet<br> Tamir • Bakım • Servis</h1>
-    <p>Sahada arıza tespiti, periyodik bakım, yedek parça temini ve hidrolik/elektrik sorunlarının çözümü. Hızlı dönüş, şeffaf fiyat, garantili işçilik.</p>
-    <div class="cta-row">
-      <a class="btn primary" href="#iletisim">Hemen Ulaş</a>
-      <a class="btn ghost" href="https://wa.me/905335930258" target="_blank" rel="noopener">WhatsApp (Musa)</a>
-    </div>
-    <ul class="badges">
-      <li>7/24 Destek</li><li>Yerinde Servis</li><li>Uygun Yedek Parça</li>
-    </ul>
-  </section>
 
-  <section id="hizmetler" class="container grid">
-  <!-- Arıza Tespiti -->
+<header class="container">
+  <div class="brand">
+    <img src="logo.png" alt="Göksu Forklift Logo" class="logo" style="width:50px; height:50px;">
+    <div class="brand-text">
+      <span class="brand-name">GÖKSU FORKLİFT</span>
+      <small class="brand-tag">TRANSPALET • Tamir &amp; Bakım</small>
+    </div>
+  </div>
+  <nav>
+    <a href="#hizmetler">Hizmetler</a>
+    <a href="#iletisim">İletişim</a>
+    <a class="btn small" href="https://wa.me/905335930258" target="_blank" rel="noopener">WhatsApp</a>
+  </nav>
+</header>
+
+<section id="hizmetler" class="container grid">
   <article class="card">
     <h3>Arıza Tespiti</h3>
     <p>
@@ -92,7 +48,6 @@
     </p>
   </article>
 
-  <!-- Periyodik Bakım -->
   <article class="card">
     <h3>Periyodik Bakım</h3>
     <p>
@@ -102,7 +57,6 @@
     </p>
   </article>
 
-  <!-- Yedek Parça -->
   <article class="card">
     <h3>Yedek Parça</h3>
     <p>
@@ -112,32 +66,26 @@
   </article>
 </section>
 
-  <section id="iletisim" class="container contact">
-    <h2>İletişim</h2>
-    <div class="people">
-      <div class="person">
-        <b>Enis Göğsü</b><br>
-        <a href="tel:+905321395336">+90 532 139 53 36</a> · <a href="https://wa.me/905335930258" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-      <div class="person">
-        <b>Musa Güler</b><br>
-        <a href="tel:+905335930258">+90 533 593 02 58</a> · <a href="https://wa.me/905335930258" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </div>
-    <p><b>Adresler</b></p>
-    <p>Ofis : Abdurrahmangazi Mah. Petrolyolu Cad. No:142/A Sultanbeyli - İST.</p>
-    <p>Atölye: Hamidiye Mah. Seyyid Kutup Cad. No.1/A Sultanbeyli - İST.</p>
-  </section>
+<section id="iletisim" class="container">
+  <h2>İletişim</h2>
+  <p><b>Musa Usta</b> – <a href="tel:+905335930258">+90 533 593 02 58</a> · <a href="https://wa.me/905335930258" target="_blank" rel="noopener">WhatsApp</a></p>
+  <p><b>Enis Göğsu</b> – <a href="tel:+905321395336">+90 532 139 53 36</a></p>
+  <p>
+    Ofis: Abdurrahmangazi Mah. Petrolyolu Cad. No:142/A, Sultanbeyli – İstanbul
+    · <a href="https://maps.google.com/?q=Abdurrahmangazi%20Mah.%20Petrolyolu%20Cad.%20No:142/A%20Sultanbeyli%20İstanbul" target="_blank" rel="noopener">Haritada Aç</a>
+  </p>
+  <p>
+    Atölye: Hamidiye Mah. Seyyid Kutup Cad. No:1/A, Sultanbeyli – İstanbul
+    · <a href="https://maps.google.com/?q=Hamidiye%20Mah.%20Seyyid%20Kutup%20Cad.%20No:1/A%20Sultanbeyli%20İstanbul" target="_blank" rel="noopener">Haritada Aç</a>
+  </p>
+  <p><b>Email:</b> <a href="mailto:goksu.forklift@gmail.com">goksu.forklift@gmail.com</a></p>
+</section>
 
-  <footer class="container footer">
-    <p>© <span id="yil"></span> GÖKSU FORKLİFT — Tüm hakları saklıdır.</p>
-  </footer>
+<a class="wa-fab" href="https://wa.me/905335930258" target="_blank" title="WhatsApp">💬</a>
 
-  <a class="wa-fab" href="https://wa.me/905335930258" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+<footer>
+  © 2025 Göksu Forklift • Tüm Hakları Saklıdır
+</footer>
 
-  <script>document.getElementById('yil').textContent=new Date().getFullYear();</script>
 </body>
 </html>
-
-
-
