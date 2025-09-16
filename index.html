@@ -3,157 +3,171 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GÖKSU FORKLİFT | Transpalet · Forklift · Manlift Tamir & Bakım</title>
-<meta name="description" content="Göksu Forklift — Transpalet, forklift ve manlift tamir-bakım, yerinde servis, periyodik bakım ve yedek parça. Sultanbeyli ve çevresi.">
+<title>GÖKSU FORKLİFT | Tamir · Bakım · Servis</title>
 <link rel="icon" href="favicon.png">
 <style>
-  :root{
-    --text:#0f172a;      /* lacivertimsi koyu */
-    --muted:#475569;     /* gri metin */
-    --brand:#fbbf24;     /* kehribar sarı */
-    --stroke:#e2e8f0;    /* açık gri çizgi */
-    --card:#ffffff;
-    --bg:#f8fafc;        /* sayfa arka planı */
+  :root {
+    --brand:#ffd000;
+    --bg1:#8B0000;
+    --bg2:#b22222;
+    --card-bg:rgba(255,255,255,0.1);
+    --text:#ffffff;
+    --muted:#f3f3f3;
   }
-  *{box-sizing:border-box}
-  html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}
-  a{color:var(--text);text-decoration:none}
-  .container{max-width:1100px;margin:0 auto;padding:20px}
-  /* HEADER */
-  header{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--stroke);z-index:10}
-  .topbar{display:flex;align-items:center;justify-content:space-between}
-  .brand{display:flex;align-items:center;gap:12px}
-  .brand .logo{width:56px;height:56px;object-fit:contain;border-radius:12px;background:#fff}
-  .brand-name{font-weight:800;letter-spacing:.2px}
-  .brand-tag{display:block;color:var(--muted);font-weight:600}
-  nav a{margin-left:18px;color:var(--muted);font-weight:600}
-  nav a:hover{color:var(--text)}
-  .btn{display:inline-block;padding:10px 16px;border-radius:12px;border:2px solid var(--text);font-weight:800}
-  .btn.primary{background:var(--brand);border-color:var(--brand);color:#1f2937}
-  .btn.ghost{border-color:#cbd5e1;color:#0f172a}
-  /* BANNER */
-  .banner{background:#fff}
-  .banner .wrap{border:1px solid var(--stroke);border-radius:16px;overflow:hidden}
-  .banner img{width:100%;height:auto;display:block}
-  /* HERO */
-  .hero{padding:42px 20px 10px}
-  .hero h1{font-size:40px;line-height:1.1;margin:0 0 10px}
-  .hero p{color:var(--muted);max-width:760px;margin:0 0 18px}
-  .cta{display:flex;gap:12px;flex-wrap:wrap}
-  /* CARDS */
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:18px;box-shadow:0 4px 18px rgba(15,23,42,.06)}
-  .card h3{margin:4px 0 8px;color:#1f2937;border-left:6px solid var(--brand);padding-left:10px}
-  .card p{color:#334155}
-  /* CONTACT */
-  .contact h2{margin:10px 0}
-  .contact a{color:#111}
-  .chip{display:inline-block;background:var(--brand);color:#111;font-weight:800;border-radius:999px;padding:6px 10px}
-  .people{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0}
-  .people a{color:#0f172a}
-  .people .wa{color:#0a7c3a}
-  /* FOOTER & FAB */
-  footer{border-top:1px solid var(--stroke);color:#475569;text-align:center;padding:22px;background:#fff}
-  .wa-fab{position:fixed;right:18px;bottom:18px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25d366;color:#fff;font-weight:800;border:2px solid #15803d;box-shadow:0 10px 20px rgba(2,6,23,.15)}
-  /* RESPONSIVE */
-  @media (max-width:980px){
-    .grid{grid-template-columns:1fr}
-    .people{grid-template-columns:1fr}
-    .hero h1{font-size:32px}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background: linear-gradient(135deg, var(--bg1), var(--bg2));
+    color: var(--text);
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  a {color: var(--brand); text-decoration:none;}
+  header {
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 12px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    z-index: 10;
+  }
+  .brand {display:flex; align-items:center; gap:10px;}
+  .brand img {width:55px; height:55px; border-radius:12px; background:#fff;}
+  .brand-name {font-size:1.4rem; font-weight:800;}
+  .brand-tag {font-size:0.9rem; opacity:0.85;}
+  nav a {margin-left:16px; font-weight:600; color:#fff;}
+  nav a:hover {color: var(--brand);}
+  .btn {padding:10px 16px; border-radius:14px; background:var(--brand); color:#000; font-weight:800;}
+  .banner img {width:100%; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.3); margin:20px 0;}
+  .hero {text-align:center; padding:50px 20px;}
+  .hero h1 {font-size:42px; margin-bottom:10px;}
+  .hero p {max-width:700px; margin:0 auto 18px; font-size:1.1rem; color:var(--muted);}
+  .cta {display:flex; gap:12px; justify-content:center; flex-wrap:wrap;}
+  .grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px; max-width:1100px; margin:40px auto; padding:0 20px;}
+  .card {
+    background: var(--card-bg);
+    border:1px solid rgba(255,255,255,0.2);
+    border-radius:16px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover {transform: translateY(-4px); box-shadow:0 12px 28px rgba(0,0,0,0.35);}
+  .card h3 {font-size:1.4rem; margin-bottom:10px; color:var(--brand);}
+  .card p {line-height:1.5;}
+  #iletisim {max-width:900px; margin:40px auto; padding:20px;}
+  .people {display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:16px 0;}
+  footer {
+    text-align:center;
+    padding:20px;
+    font-size:0.9rem;
+    background: rgba(0,0,0,0.4);
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top:40px;
+  }
+  /* Kenar görselleri */
+  .side-img {
+    position: fixed;
+    top: 20%;
+    width: 220px;
+    opacity: 0.25;
+    z-index: 0;
+    pointer-events: none;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5));
+  }
+  .side-left {left:0;}
+  .side-right {right:0;}
+  /* WhatsApp FAB */
+  .wa-fab {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 64px;
+    height: 64px;
+    background: #25d366;
+    border-radius: 50%;
+    display:grid;
+    place-items:center;
+    color:#fff;
+    font-size:20px;
+    font-weight:800;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0% {box-shadow:0 0 0 0 rgba(37,211,102,0.5);}
+    70% {box-shadow:0 0 0 15px rgba(37,211,102,0);}
+    100% {box-shadow:0 0 0 0 rgba(37,211,102,0);}
+  }
+  @media(max-width:1000px){
+    .side-img{display:none;}
+    .hero h1 {font-size:32px;}
   }
 </style>
 </head>
 <body>
 
+<img src="transpalet.png" class="side-img side-left" alt="Transpalet">
+<img src="forklift.png" class="side-img side-right" alt="Forklift">
+
 <header>
-  <div class="container topbar">
-    <div class="brand">
-      <img src="logo.png" alt="Göksu Forklift Logo" class="logo">
-      <div>
-        <span class="brand-name">GÖKSU FORKLİFT</span>
-        <small class="brand-tag">TRANSPALET • FORKLİFT • MANLİFT — Tamir &amp; Bakım</small>
-      </div>
+  <div class="brand">
+    <img src="logo.png" alt="Göksu Forklift Logo">
+    <div>
+      <span class="brand-name">GÖKSU FORKLİFT</span>
+      <small class="brand-tag">TRANSPALET • FORKLİFT • MANLİFT</small>
     </div>
-    <nav>
-      <a href="#hizmetler">Hizmetler</a>
-      <a href="#iletisim">İletişim</a>
-      <a class="btn primary" href="https://wa.me/905335930258" target="_blank" rel="noopener">WhatsApp</a>
-    </nav>
   </div>
+  <nav>
+    <a href="#hizmetler">Hizmetler</a>
+    <a href="#iletisim">İletişim</a>
+    <a class="btn" href="https://wa.me/905335930258" target="_blank">WhatsApp</a>
+  </nav>
 </header>
 
-<!-- KARTVİZİT -->
-<section class="banner">
-  <div class="container">
-    <div class="wrap">
-      <img src="kartvizit.jpg" alt="Göksu Forklift Kartvizit">
-    </div>
-  </div>
-</section>
+<div class="banner"><img src="kartvizit.jpg" alt="Göksu Forklift Kartvizit"></div>
 
-<!-- KAHRAMAN -->
 <section class="hero">
-  <div class="container">
-    <span class="chip">Yerinde Servis • Uygun Yedek Parça</span>
-    <h1>Transpalet · Forklift · Manlift <br> Tamir · Bakım · Servis</h1>
-    <p>Yerinde arıza tespiti, periyodik bakım, motor/şanzıman yenileme, kart ve elektrik tesisatı onarımı. Hızlı dönüş, şeffaf fiyat, garantili işçilik.</p>
-    <div class="cta">
-      <a class="btn primary" href="tel:+905335930258">Telefon Et (Musa)</a>
-      <a class="btn ghost" href="https://wa.me/905335930258" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
+  <h1>Transpalet · Forklift · Manlift Tamir & Bakım</h1>
+  <p>Yerinde arıza tespiti, periyodik bakım, motor/şanzıman yenileme, kart ve elektrik tesisatı onarımı. Hızlı dönüş, şeffaf fiyat, garantili işçilik.</p>
+  <div class="cta">
+    <a class="btn" href="tel:+905335930258">Telefon Et (Musa)</a>
+    <a class="btn" style="background:#fff;color:#000" href="https://wa.me/905335930258" target="_blank">WhatsApp</a>
   </div>
 </section>
 
-<!-- HİZMETLER -->
-<section id="hizmetler" class="container grid">
+<section id="hizmetler" class="grid">
   <article class="card">
-    <h3>Arıza Tespiti</h3>
-    <p>
-      Elektrikli makine, hidrolik sistem, fren ve direksiyon pompası, dizel ve gazlı makineler,
-      şanzıman ve asansör arızalarının hızlı tespiti. Sahada çözüm ve garantili onarım.
-    </p>
+    <h3>🔧 Arıza Tespiti</h3>
+    <p>Elektrikli makine, hidrolik sistem, fren ve direksiyon pompası, dizel ve gazlı makineler, şanzıman ve asansör arızalarının hızlı tespiti. Sahada çözüm ve garantili onarım.</p>
   </article>
-
   <article class="card">
-    <h3>Periyodik Bakım</h3>
-    <p>
-      Planlı bakım, motor yenileme, şanzıman yenileme, kart tamiri, elektrik tesisatı yenileme,
-      elektrikli makine periyodik bakımı, elektrikli transpalet bakım ve onarım, akü tamiri,
-      manuel transpalet onarım ve tamir, istif makinesi onarım ve tamir.
-    </p>
+    <h3>🛠️ Periyodik Bakım</h3>
+    <p>Planlı bakım, motor yenileme, şanzıman yenileme, kart tamiri, elektrik tesisatı yenileme, elektrikli makine periyodik bakımı, elektrikli transpalet bakım ve onarım, akü tamiri, manuel transpalet onarım ve tamir, istif makinesi onarım ve tamir.</p>
   </article>
-
   <article class="card">
-    <h3>Yedek Parça</h3>
-    <p>
-      Fork, lastik, akü, hidrolik hortum, sızdırmazlık elemanları, zincir, rulman ve tüm
-      yedek parçaların temini ve montajı. Orijinal ve uygun fiyatlı alternatif seçenekler.
-    </p>
+    <h3>📦 Yedek Parça</h3>
+    <p>Fork, lastik, akü, hidrolik hortum, sızdırmazlık elemanları, zincir, rulman ve tüm yedek parçaların temini ve montajı. Orijinal ve uygun fiyatlı alternatif seçenekler.</p>
   </article>
 </section>
 
-<!-- İLETİŞİM -->
-<section id="iletisim" class="container contact">
-  <h2>İletişim</h2>
+<section id="iletisim">
+  <h2>📞 İletişim</h2>
   <div class="people">
-    <div>
-      <b>Musa Usta</b><br>
-      <a href="tel:+905335930258">+90 533 593 02 58</a> ·
-      <a class="wa" href="https://wa.me/905335930258" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
-    <div>
-      <b>Enis Göğsu</b><br>
-      <a href="tel:+905321395336">+90 532 139 53 36</a>
-    </div>
+    <div><b>Musa Usta</b><br><a href="tel:+905335930258">+90 533 593 02 58</a> · <a href="https://wa.me/905335930258" target="_blank">WhatsApp</a></div>
+    <div><b>Enis Göğsu</b><br><a href="tel:+905321395336">+90 532 139 53 36</a></div>
   </div>
-  <p><b>Ofis:</b> Abdurrahmangazi Mah. Petrolyolu Cad. No:142/A, Sultanbeyli – İstanbul ·
-     <a href="https://maps.google.com/?q=Abdurrahmangazi%20Mah.%20Petrolyolu%20Cad.%20No:142/A%20Sultanbeyli%20İstanbul" target="_blank" rel="noopener">Haritada Aç</a></p>
-  <p><b>Atölye:</b> Hamidiye Mah. Seyyid Kutup Cad. No:1/A, Sultanbeyli – İstanbul ·
-     <a href="https://maps.google.com/?q=Hamidiye%20Mah.%20Seyyid%20Kutup%20Cad.%20No:1/A%20Sultanbeyli%20İstanbul" target="_blank" rel="noopener">Haritada Aç</a></p>
+  <p><b>Ofis:</b> Abdurrahmangazi Mah. Petrolyolu Cad. No:142/A, Sultanbeyli – İstanbul</p>
+  <p><b>Atölye:</b> Hamidiye Mah. Seyyid Kutup Cad. No:1/A, Sultanbeyli – İstanbul</p>
   <p><b>Email:</b> <a href="mailto:goksu.forklift@gmail.com">goksu.forklift@gmail.com</a></p>
 </section>
 
-<a class="wa-fab" href="https://wa.me/905335930258" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+<a class="wa-fab" href="https://wa.me/905335930258" target="_blank">WA</a>
 
 <footer>
   © <span id="yil"></span> Göksu Forklift • Tüm Hakları Saklıdır
